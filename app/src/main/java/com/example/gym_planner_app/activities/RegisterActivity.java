@@ -43,6 +43,11 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
 
+            if (password.length() < 6) {
+                Toast.makeText(RegisterActivity.this, "Password must be at least 6 characters", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
@@ -56,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 return;
                             }
 
-                            int userId = databaseHelper.getUserId(email, password);
+                            int userId = databaseHelper.getUserIdByEmail(email);
 
                             Toast.makeText(RegisterActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
 
