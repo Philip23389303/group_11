@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Bests"
+            android:textColor="@color/textPrimary"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your strongest lifts based on logged workouts"
+            android:textColor="@color/textSecondary"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvNoPersonalBests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No personal bests yet. Log a workout first."
+            android:textColor="@color/textSecondary"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/personalBestsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btnBackHome"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_secondary"
+            android:text="Back to Home"
+            android:textAllCaps="false"
+            android:textColor="@color/textPrimary" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

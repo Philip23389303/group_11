@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rest Timer"
+            android:textColor="@color/textPrimary"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create and save timers for your rest periods"
+            android:textColor="@color/textSecondary"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/tvCurrentTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current Timer: None"
+                android:textColor="@color/textSecondary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTimerDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="@color/textPrimary"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnStopTimer"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_secondary"
+                android:text="Stop Timer"
+                android:textAllCaps="false"
+                android:textColor="@color/textPrimary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Timer"
+            android:textColor="@color/textPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/etTimerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Timer Name"
+            android:inputType="textCapWords"
+            android:padding="16dp"
+            android:textColor="@color/inputText"
+            android:textColorHint="@color/hintText" />
+
+        <EditText
+            android:id="@+id/etMinutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Minutes"
+            android:inputType="number"
+            android:padding="16dp"
+            android:textColor="@color/inputText"
+            android:textColorHint="@color/hintText" />
+
+        <EditText
+            android:id="@+id/etSeconds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Seconds"
+            android:inputType="number"
+            android:padding="16dp"
+            android:textColor="@color/inputText"
+            android:textColorHint="@color/hintText" />
+
+        <Button
+            android:id="@+id/btnSaveTimer"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_primary"
+            android:text="Save Timer"
+            android:textAllCaps="false"
+            android:textColor="@color/textPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Timers"
+            android:textColor="@color/textPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="28dp" />
+
+        <LinearLayout
+            android:id="@+id/savedTimersContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btnBackHome"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_secondary"
+            android:text="Back to Home"
+            android:textAllCaps="false"
+            android:textColor="@color/textPrimary" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

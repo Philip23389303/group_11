@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/card_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvSetLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Set 1"
+        android:textColor="@color/textPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinnerSetExercise"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:popupBackground="@drawable/card_background" />
+
+    <EditText
+        android:id="@+id/etSetReps"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_background"
+        android:hint="Reps"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textColor="@color/inputText"
+        android:textColorHint="@color/hintText" />
+
+    <EditText
+        android:id="@+id/etSetWeight"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_background"
+        android:hint="Weight (kg)"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="@color/inputText"
+        android:textColorHint="@color/hintText" />
+
+</LinearLayout>

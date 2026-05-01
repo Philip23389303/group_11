@@ -1,4 +1,4 @@
-package com.example.group_11;
+package com.example.gym_planner_app;
 
 import org.junit.Test;
 

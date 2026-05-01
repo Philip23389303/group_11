@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gym Journal"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Track thoughts, goals and workout notes"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnNewNote"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/button_primary"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:text="New"
+                android:textAllCaps="false"
+                android:textColor="@color/textPrimary" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNoNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/card_background"
+            android:padding="18dp"
+            android:text="No notes yet. Tap New to create your first journal entry."
+            android:textColor="@color/textSecondary"
+            android:textSize="16sp" />
+
+        <GridLayout
+            android:id="@+id/notesGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:columnCount="2"
+            android:useDefaultMargins="true" />
+
+        <Button
+            android:id="@+id/btnBackHome"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_secondary"
+            android:text="Back to Home"
+            android:textAllCaps="false"
+            android:textColor="@color/textPrimary" />
+
+    </LinearLayout>
+</ScrollView>

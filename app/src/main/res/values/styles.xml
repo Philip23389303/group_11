@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="CalendarWeekDay">
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+    <style name="CalendarDate">
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+</resources>

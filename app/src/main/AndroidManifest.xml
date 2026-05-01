@@ -2,24 +2,45 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Gym-Planner-App"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Group_11">
+        android:theme="@style/Theme.GymPlannerApp">
+
+        <activity android:name=".activities.ReminderActivity" />
+        <activity android:name=".activities.ProgressActivity" />
+        <activity android:name=".activities.NoteEditorActivity" />
+        <activity android:name=".activities.JournalActivity" />
+        <activity android:name=".activities.LogWorkoutActivity" />
+        <activity android:name=".activities.ExerciseLibraryActivity" />
+        <activity android:name=".activities.WorkoutPlannerActivity" />
+        <activity android:name=".activities.BmiCalculatorActivity" />
+        <activity android:name=".activities.PersonalBestsActivity" />
+        <activity android:name=".activities.RestTimerActivity" />
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".activities.ReminderReceiver"
+            android:exported="false" />
+
     </application>
 
 </manifest>

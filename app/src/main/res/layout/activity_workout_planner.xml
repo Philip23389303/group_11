@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Workout Planner"
+            android:textColor="@color/textPrimary"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="Plan your training schedule"
+            android:textColor="@color/textSecondary"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day of Workout"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/spinnerDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:textColor="@color/textPrimary"
+                android:popupBackground="@drawable/card_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Workout Time"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/spinnerTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:textColor="@color/textPrimary"
+                android:popupBackground="@drawable/card_background"/>
+
+            <CheckBox
+                android:id="@+id/cbReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Remind me 30 minutes before"
+                android:textColor="@color/textPrimary"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/spinnerWorkoutName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:popupBackground="@drawable/card_background" />
+
+            <Button
+                android:id="@+id/btnSaveWorkout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_primary"
+                android:text="Save Workout"
+                android:textAllCaps="false"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnDeleteSelected"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button_secondary"
+                android:text="Delete Selected Workouts"
+                android:textAllCaps="false"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Saved Workouts"
+            android:textColor="@color/textPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/lvWorkouts"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/card_background"
+            android:choiceMode="multipleChoice"
+            android:divider="@color/divider"
+            android:dividerHeight="1dp" />
+
+        <Button
+            android:id="@+id/btnBackHome"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_secondary"
+            android:text="Back to Home"
+            android:textAllCaps="false"
+            android:textColor="@color/textPrimary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
