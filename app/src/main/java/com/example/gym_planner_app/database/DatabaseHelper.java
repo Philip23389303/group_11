@@ -150,6 +150,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result > 0;
     }
 
+
+
+    public boolean updateUserPasswordByEmail(String email, String newPassword) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_PASSWORD, newPassword);
+
+        int result = db.update(
+                TABLE_USERS,
+                values,
+                COLUMN_EMAIL + "=?",
+                new String[]{email}
+        );
+
+        return result > 0;
+    }
+
+    public int getUserIdByEmail(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(
+                "SELECT " + COLUMN_ID + " FROM " + TABLE_USERS +
+                        " WHERE " + COLUMN_EMAIL + "=?",
+                new String[]{email}
+        );
+
+        int userId = -1;
+
+        if (cursor.moveToFirst()) {
+            userId = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID));
+        }
+
+        cursor.close();
+        return userId;
+    }
+
+
     public int getUserId(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(

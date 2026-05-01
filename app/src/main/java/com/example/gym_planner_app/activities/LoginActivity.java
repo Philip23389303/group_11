@@ -46,20 +46,24 @@ public class LoginActivity extends AppCompatActivity {
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
 
-                            int userId = databaseHelper.getUserId(email, password);
+                            int userId = databaseHelper.getUserIdByEmail(email);
 
                             if (userId == -1) {
                                 boolean inserted = databaseHelper.insertUser("User", email, password);
 
                                 if (inserted) {
-                                    userId = databaseHelper.getUserId(email, password);
+                                    userId = databaseHelper.getUserIdByEmail(email);
                                 }
+                            } else {
+                                databaseHelper.updateUserPasswordByEmail(email, password);
                             }
 
                             if (userId == -1) {
-                                Toast.makeText(LoginActivity.this,
+                                Toast.makeText(
+                                        LoginActivity.this,
                                         "Login worked, but local user record could not be created.",
-                                        Toast.LENGTH_LONG).show();
+                                        Toast.LENGTH_LONG
+                                ).show();
                                 return;
                             }
 
@@ -72,7 +76,8 @@ public class LoginActivity extends AppCompatActivity {
 
                         } else {
                             String errorMessage = "Login failed";
-                            if (task.getException() != null) {
+
+                            if (task.getException() != null && task.getException().getMessage() != null) {
                                 errorMessage = "Login failed: " + task.getException().getMessage();
                             }
 
